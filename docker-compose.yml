@@ -8,7 +8,7 @@ volumes:
 
 networks:
   default:
-    name: ciname
+    name: cinema
     external: false
 
 services:
