@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+elasticsearch
+requests
+pytest
+httpx
+python-dotenv
+pytest-cov
