@@ -6,7 +6,9 @@ export const MovieGrid = ({ movies }) => {
   return (
     <Box sx={{ flexGrow: 1, padding: 2 }}>
       <Grid container spacing={2}>
-        {movies ? (
+        {movies === null ? (
+          <Grid>Fill title and year to find movies</Grid>
+        ) : movies.length > 0 ? (
           movies.map((movie, index) => (
             <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index}>
               <MovieDisplay
