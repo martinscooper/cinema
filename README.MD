@@ -33,11 +33,13 @@ The following command runs a docker compose file that:
 
 - Sets a local Elastic Search db.
 - Builds and runs a FastAPI app. This app serves a React app at the root path `/`.
-- Runs a job that calls the `/api/index_movies` endpoint.
+- Runs a job that calls the `/api/index_movies` endpoint to popupate the index.
 
 ```bash
 docker compose --profile all up
 ```
+
+_Note: run `docker compose --profile all down -v` to remove the containers and volumes._
 
 ## Development setup
 
@@ -48,6 +50,8 @@ Set up the local Elastic Search database and run the backend and the frontend se
 ```bash
 docker-compose --profile db up
 ```
+
+_Note: run `docker compose down --profile db -v` to remove the containers and volumes._
 
 ### Backend
 
@@ -63,6 +67,8 @@ pip install pre-commit
 pre-commit install
 python3 run.py
 ```
+
+_Note: you will have to manually run a request against `/api/index_movies` endpoint to popupate the Elastic Search index._
 
 ### Frontend
 
