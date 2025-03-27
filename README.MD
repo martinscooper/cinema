@@ -87,7 +87,7 @@ Visit [http://localhost:8000](http://localhost:8000)
 
 ## OpenAPI documentation
 
-The auto-generated OpenAPI documentation can be founf at [http://localhost:8000/docs](http://localhost:8000/docs)
+The auto-generated OpenAPI documentation can be found at [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## Tests
 
