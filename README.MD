@@ -94,5 +94,7 @@ The auto-generated OpenAPI documentation can be found at [http://localhost:8000/
 FastAPI tests are inside `backend/tests`. Use the following command to run them:
 
 ```bash
+cd backend
+source venv/bin/activate
 python3 -m pytest
 ```
