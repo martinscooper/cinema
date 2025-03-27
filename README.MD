@@ -17,6 +17,16 @@
 
 ## Set up the app
 
+## Clone the repo
+
+Start by cloning the repository to your local machine using Git:
+
+```bash
+git clone https://github.com/martinscooper/cinema.git
+# or via ssh: git@github.com:martinscooper/cinema.git
+cd cinema
+```
+
 ### Set env variables
 
 Each component has an `.env.example` file with default values. Run the following command to create the `.env` files with those default values.
