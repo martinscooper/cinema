@@ -17,7 +17,7 @@
 
 ## Set up the app
 
-## Clone the repo
+### Clone the repo
 
 Start by cloning the repository to your local machine using Git:
 
@@ -37,7 +37,7 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-### Non-development setup
+### Non-development setup (just run the app)
 
 The following command runs a docker compose file that:
 
@@ -51,11 +51,11 @@ docker compose --profile all up
 
 _Note: run `docker compose --profile all down -v` to remove the containers and volumes._
 
-## Development setup
+### Development setup
 
 Set up the local Elastic Search database and run the backend and the frontend separatelly.
 
-### Elastic Search
+#### Elastic Search
 
 ```bash
 docker-compose --profile db up
@@ -63,7 +63,7 @@ docker-compose --profile db up
 
 _Note: run `docker compose down --profile db -v` to remove the containers and volumes._
 
-### Backend
+#### Backend
 
 Run the FastAPI app.
 
@@ -80,7 +80,7 @@ python3 run.py
 
 _Note: you will have to manually run a request against `/api/index_movies` endpoint to popupate the Elastic Search index._
 
-### Frontend
+#### Frontend
 
 Run the React app.
 
