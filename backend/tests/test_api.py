@@ -134,7 +134,7 @@ def test_search_movies(client):
             "query": {
                 "bool": {
                     "must": [
-                        {"match": {"title": {"query": "Sample"}}},
+                        {"match_phrase": {"title": {"query": "Sample"}}},
                         {"term": {"year": 2025}},
                     ]
                 }
