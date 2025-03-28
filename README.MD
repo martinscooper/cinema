@@ -37,7 +37,11 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
-### Non-development setup (just run the app)
+### Setup, intallation, and running the app
+
+You may choose one of the following subsections in order to run the app.
+
+#### Non-development setup (just run the app)
 
 The following command runs a docker compose file that:
 
@@ -51,45 +55,45 @@ docker compose --profile all up
 
 _Note: run `docker compose --profile all down -v` to remove the containers and volumes._
 
-### Development setup
+#### Development setup
 
 Set up the local Elastic Search database and run the backend and the frontend separatelly.
 
-#### Elastic Search
+1. Elastic Search
 
-```bash
-docker-compose --profile db up
-```
+    ```bash
+    docker-compose --profile db up
+    ```
 
-_Note: run `docker compose down --profile db -v` to remove the containers and volumes._
+    _Note: run `docker compose down --profile db -v` to remove the containers and volumes._
 
-#### Backend
+2. Backend
 
-Run the FastAPI app.
+    Run the FastAPI app.
 
-```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install pre-commit
-pre-commit install
-python3 run.py
-```
+    ```bash
+    cd backend
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    pip install pre-commit
+    pre-commit install
+    python3 run.py
+    ```
 
-_Note: you will have to manually run a request against `/api/index_movies` endpoint to popupate the Elastic Search index._
+    _Note: you will have to manually run a request against `/api/index_movies` endpoint to popupate the Elastic Search index._
 
-#### Frontend
+3. Frontend
 
-Run the React app.
+    Run the React app.
 
-```bash
-# from the root directory
-cd frontend
-npm install
-npm run dev
-```
+    ```bash
+    # from the root directory
+    cd frontend
+    npm install
+    npm run dev
+    ```
 
 ## Open the app
 
