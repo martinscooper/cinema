@@ -108,3 +108,12 @@ cd backend
 source venv/bin/activate
 python3 -m pytest
 ```
+
+## Improvements/TODO
+
+- Rethink `index-movies` endpoint. Should it be just a script?
+- In the backend, implement a layered architecture.
+- Complete parametrization of docker compose and docker.
+- Take a more defensive approach for the API and tests.
+- Search: explore treating search by title as a keyword.
+- In the frontend, bind title and year values to the query params to allow refreshing the page without losing the results.
