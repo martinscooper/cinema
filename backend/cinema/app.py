@@ -131,7 +131,7 @@ async def search_movies(
     if title:
         and_conditions.append(
             {
-                "match": {
+                "match_phrase": {
                     "title": {
                         "query": title,
                     }
